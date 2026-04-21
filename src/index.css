@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
+
+@layer base {
+  :root {
+    --background: 225 45% 5%;
+    --foreground: 210 60% 93%;
+    --card: 220 35% 10%;
+    --card-foreground: 210 60% 93%;
+    --popover: 220 35% 10%;
+    --popover-foreground: 210 60% 93%;
+    --primary: 22 100% 55%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 30% 15%;
+    --secondary-foreground: 210 60% 93%;
+    --muted: 220 30% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 220 30% 15%;
+    --accent-foreground: 210 60% 93%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 45% 15%;
+    --input: 220 45% 15%;
+    --ring: 22 100% 55%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.panel-fade {
+  animation: fadeSlide 0.3s ease both;
+}
